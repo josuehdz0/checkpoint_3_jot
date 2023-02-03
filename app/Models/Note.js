@@ -4,7 +4,7 @@ import { generateId } from "../Utils/generateId.js";
 
 export class Note{
   constructor(data){
-    this.id = generateId
+    this.id = generateId()
     this.name = data.name
     // this.date = data.created
     this.body = data.body || ''
@@ -12,7 +12,7 @@ export class Note{
 
   get allNotesTemplate(){
     return`
-    <h3> ${this.name} </h3>
+    <h3 onclick= "app.notesController.setActiveNote('${this.id}')"> ${this.name} </h3>
     `
   }
 

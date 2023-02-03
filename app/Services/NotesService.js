@@ -13,6 +13,16 @@ class NotesService{
     saveState('notes',appState.notes)
     appState.emit('notes')
   }
+
+  setActiveNote(noteId){
+    let foundNote = appState.notes.find(n => n.id == noteId)
+    console.log(foundNote);
+    appState.activeNote = foundNote
+  }
+
+// when I update the note, the body will change, and so will updated timestamp
+// note.updated = date.now (get the curent timestamp; refer to MDN docs) https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+
 }
 
 export const notesService = new NotesService()

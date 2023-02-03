@@ -23,6 +23,7 @@ export class NotesController{
   constructor(){
     _drawNotes()
     appState.on('notes',_drawNotes)
+    appState.on('activeNote', _drawNote)
   }
 
   createNote(){
@@ -36,9 +37,16 @@ export class NotesController{
     } catch (error) {
       Pop.error(error.message)
       console.error(error);
-      
     }
+  }
 
+  setActiveNote(noteId){
+    try {
+      notesService.setActiveNote(noteId)
+    } catch (error) {
+      console.error(error);
+      Pop.error(error.message)
+    }
 
   }
 
