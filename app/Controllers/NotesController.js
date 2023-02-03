@@ -11,6 +11,13 @@ function _drawNotes(){
   setHTML('allNotes',template)
 }
 
+function _drawNote() {
+  let note = appState.activeNote
+  setHTML('bigNote',note.BigNoteTemplate)
+
+  
+}
+
 
 export class NotesController{
   constructor(){
