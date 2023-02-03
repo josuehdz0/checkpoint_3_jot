@@ -6,13 +6,13 @@ export class Note{
   constructor(data){
     this.id = generateId
     this.name = data.name
-    this.date = data.created
+    // this.date = data.created
     this.body = data.body || ''
   }
 
   get allNotesTemplate(){
     return`
-    <h3> Test Note </h3>
+    <h3> ${this.name} </h3>
     `
   }
 }

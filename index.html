@@ -48,12 +48,17 @@
           <div class="col-md-4 my-3">
             <div id="" class="card ">
               <h1 class="pt-4 text-center">Notas <span>___________</span></h1>
-              <div class="p-3" id="notes">
+              <div class="p-3" id="allNotes">
                 <h3> JavaScript</h3>
                 <h3> CSS</h3>
                 <h3> MVC</h3>
-
               </div>
+              <form onsubmit="app.notesController.createNote()">
+                <div class="m-4">
+                  <label for="note" class="form-label"></label>
+                  <input type="text" class="form-control" name="name" placeholder="New Note" required>
+                </div>
+              </form>
             </div>
           </div>
           <div class="col-md-6 my-3">
