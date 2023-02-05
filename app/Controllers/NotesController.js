@@ -55,7 +55,7 @@ export class NotesController{
       let textArea = document.getElementById('📝')
       let updatedBody = textArea.value
       console.log('blurred',updatedBody);
-      notesService.updatedNote(updatedBody)
+      notesService.updateNote(updatedBody)
     } catch (error) {
       console.error(error)
       Pop.error(error.message)

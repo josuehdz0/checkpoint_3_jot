@@ -3,9 +3,10 @@ import { Note } from "../Models/Note.js"
 import { saveState } from "../Utils/Store.js";
 
 class NotesService{
-  updatedNote(updatedBody) {
+  updateNote(updatedBody) {
     let activeNote = appState.activeNote
     activeNote.body = updatedBody
+    activeNote.updatedDate = new Date().toLocaleString('en-US')
     saveState('notes',appState.notes)
     console.log(appState.notes);
     appState.emit('activeNote')
