@@ -6,8 +6,9 @@ export class Note{
   constructor(data){
     this.id = generateId()
     this.name = data.name
-    // this.date = data.created
+    this.date = data.date || new Date().toLocaleString('en-US')
     this.body = data.body || ''
+    this.color = data.color
   }
 
   get allNotesTemplate(){
@@ -23,13 +24,13 @@ get BigNoteTemplate(){
       <h1 class="text-center">${this.name} </h1>
       <div class="row justify-content-evenly ">
         <div class="col-4">
-          <h6> Created at: sdf</h6>
+          <h6> Created at: ${this.date}</h6>
           <h6> Updated at : sdfa</h6>
           <h6> Words: ?</h6>
         </div>
         <div class="col-7">
           <div class="">
-            <textarea class="bodytext"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex pariatur, id porro neque aperiam esse!
+            <textarea class="bodytext"> ${this.body}
             </textarea>
           </div>
         </div>
