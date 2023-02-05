@@ -3,6 +3,13 @@ import { Note } from "../Models/Note.js"
 import { saveState } from "../Utils/Store.js";
 
 class NotesService{
+  updatedNote(updatedBody) {
+    let activeNote = appState.activeNote
+    activeNote.body = updatedBody
+    saveState('notes',appState.notes)
+    console.log(appState.notes);
+    appState.emit('activeNote')
+  }
 
 
 

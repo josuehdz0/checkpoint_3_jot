@@ -30,7 +30,7 @@ get BigNoteTemplate(){
         </div>
         <div class="col-7">
           <div class="">
-            <textarea class="bodytext"> ${this.body}
+            <textarea class="bodytext" name="body" id="📝" onblur="app.notesController.updateNote()"> ${this.body}
             </textarea>
           </div>
         </div>

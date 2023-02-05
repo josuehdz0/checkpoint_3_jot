@@ -50,6 +50,18 @@ export class NotesController{
 
   }
 
+  updateNote(){
+    try {
+      let textArea = document.getElementById('📝')
+      let updatedBody = textArea.value
+      console.log('blurred',updatedBody);
+      notesService.updatedNote(updatedBody)
+    } catch (error) {
+      console.error(error)
+      Pop.error(error.message)
+    }
+  }
+
 
   }
 
