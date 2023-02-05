@@ -21,8 +21,16 @@ export class Note{
 get BigNoteTemplate(){
   return`
   <div class="row">
-    <div class="p-4">
-      <h1 class="text-center">${this.name} </h1>
+    <div class="p-2">
+    <div class="d-flex justify-content-between  py-3 px-4">
+
+    <h1 class="text-center">${this.name} </h1>
+    <button class="btn btn-danger" data-bs-dismiss="modal" 
+    onclick="app.notesController.deleteNote('${this.id}')">
+      <i class="mdi mdi-trash-can"></i>
+    </button>
+
+  </div>
       <div class="row justify-content-evenly ">
         <div class="col-4">
           <h6> Created at: ${this.date}</h6>

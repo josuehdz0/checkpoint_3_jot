@@ -62,6 +62,18 @@ export class NotesController{
     }
   }
 
+  async deleteNote(noteId){
+    try {
+      const yes = await Pop.confirm('Are you sure you want to delete this note?')
+      if (!yes) {
+        return
+      }
+      notesService.deleteNote(noteId)
+    } catch (error) {
+      Pop.error(error)
+    }
+  }
+
 
   }
 

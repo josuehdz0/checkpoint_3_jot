@@ -31,6 +31,18 @@ class NotesService{
 // when I update the note, the body will change, and so will updated timestamp
 // note.updated = date.now (get the curent timestamp; refer to MDN docs) https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
+  deleteNote(noteId){
+    let noteIndex = appState.notes.findIndex(n=>n.id==noteId)
+
+    if (noteIndex == -1) {
+      throw new Error('That is a bad note id')
+    }
+
+    appState.notes.splice(noteIndex,1)
+    saveState('notes',appState.notes)
+    appState.emit('notes')// this reminds the emitter to look at this change
+  }
+
 }
 
 export const notesService = new NotesService()
