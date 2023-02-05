@@ -69,6 +69,7 @@ export class NotesController{
         return
       }
       notesService.deleteNote(noteId)
+      
     } catch (error) {
       Pop.error(error)
     }
