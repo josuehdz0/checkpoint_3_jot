@@ -15,7 +15,7 @@ export class Note{
 
   get allNotesTemplate(){
     return`
-    <h3 onclick= "app.notesController.setActiveNote('${this.id}')" > <i class="mdi mdi-text" style="color: ${this.color}"></i> ${this.name} </h3>
+    <h3 onclick= "app.notesController.setActiveNote('${this.id}')" > <i class="mdi mdi-pencil-circle" style="color: ${this.color}"></i> ${this.name} </h3>
     `
   }
 
@@ -29,7 +29,7 @@ get BigNoteTemplate(){
     <div class="p-2">
     <div class="d-flex justify-content-between  py-3 px-4">
 
-    <h1 class="text-center">${this.name} </h1>
+    <h1 class="text-center">${this.name} <i class="mdi mdi-pencil-circle" style="color: ${this.color}"></i></h1>
     <button class="btn btn-danger" data-bs-dismiss="modal" 
     onclick="app.notesController.deleteNote('${this.id}')">
       <i class="mdi mdi-trash-can"></i>
