@@ -60,9 +60,19 @@
                 <h3> MVC</h3>
               </div>
               <form onsubmit="app.notesController.createNote()">
-                <div class="m-4">
-                  <label for="note" class="form-label"></label>
-                  <input type="text" class="form-control" name="name" placeholder="New Note" required>
+                <div class="">
+
+                  <div class="m-4">
+                    <label for="note" class="form-label"></label>
+                    <input type="text" class="form-control" name="name" placeholder="New Note" required minlength="3"
+                      maxlength="15" required>
+                  </div>
+                  <div class="m-4">
+                    <label for="color" class="form-label">Select color:</label>
+                    <input type="color" class="form-control" name="color" id="color-picker">
+                  </div>
+
+
                 </div>
               </form>
             </div>

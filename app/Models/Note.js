@@ -15,15 +15,11 @@ export class Note{
 
   get allNotesTemplate(){
     return`
-    <h3 onclick= "app.notesController.setActiveNote('${this.id}')"> ${this.name} </h3>
+    <h3 onclick= "app.notesController.setActiveNote('${this.id}')" > <i class="mdi mdi-text" style="color: ${this.color}"></i> ${this.name} </h3>
     `
   }
 
-  get noteCountTemplate(){
-    return`
-    ${appState.notes.length}
-    `
-  }
+  
 
   
 
