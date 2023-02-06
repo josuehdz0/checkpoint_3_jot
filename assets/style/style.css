@@ -1,8 +1,29 @@
 /* BASIC STYLES HERE */
-.bodytext {
-  height: 50vh;
-  width: 100%;
 
+*{
+  font-family: 'Montserrat', sans-serif;
+  color: aliceblue;
+}
+
+.bodytext {
+  min-height: 50vh;
+  width: 100%;
+  color: rgb(49, 49, 49);
+  background-color: aliceblue;
 }
 
 
+.bigcard{
+  min-height: 62vh;
+  width: 100%;
+}
+
+
+.coolbackground{
+background-color: rgb(78, 107, 113);
+}
+
+.glasscard{
+  background-color: rgba(249, 249, 249, 0.427);
+  border: 2px solid rgba(175, 175, 175, 0.361);
+}

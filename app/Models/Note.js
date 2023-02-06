@@ -40,7 +40,7 @@ get BigNoteTemplate(){
         <div class="col-4">
           <h6> Created at: ${this.date}</h6>
           <h6> Updated at: ${this.updatedDate} </h6>
-          <h6> Words: ?</h6>
+          
         </div>
         <div class="col-7">
           <div class="">

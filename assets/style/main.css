@@ -9,7 +9,7 @@
   --bs-primary: #274373;
   --bs-secondary: #aeb0c5;
   --bs-danger: #890012;
-  --bs-success: #5F732D;
+  --bs-success: #85a437;
   --bs-warning: #8a4f04;
   --bs-info: #4f3862;
   --bs-dark: #111927;
@@ -3042,19 +3042,19 @@ textarea.form-control-lg {
 
 .btn-success {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #5F732D;
-  --bs-btn-border-color: #5F732D;
+  --bs-btn-bg: rgb(78, 107, 113);
+  --bs-btn-border-color: rgb(78, 107, 113);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #516226;
-  --bs-btn-hover-border-color: #4c5c24;
+  --bs-btn-hover-bg:rgb(78, 107, 113);
+  --bs-btn-hover-border-color: rgb(97, 131, 137);
   --bs-btn-focus-shadow-rgb: 119, 136, 77;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #4c5c24;
-  --bs-btn-active-border-color: #475622;
+  --bs-btn-active-bg: rgb(102, 142, 150);
+  --bs-btn-active-border-color: rgb(78, 107, 113);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #5F732D;
-  --bs-btn-disabled-border-color: #5F732D;
+  --bs-btn-disabled-bg: rgb(78, 107, 113);
+  --bs-btn-disabled-border-color: rgb(78, 107, 113);
 }
 
 .btn-info {

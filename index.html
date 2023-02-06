@@ -14,6 +14,10 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css"
     integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <style>
@@ -36,28 +40,28 @@
   <title>checkpoint_3_jot</title>
 </head>
 
-<body class="debug">
+<body class="">
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
+    <nav class="navbar navbar-dark navbar-expand coolbackground text-light no-select">
       <a class="navbar-brand ms-3" href="#">
-        <span class="ms-2">JOT</span>
+        <h1 class="ms-2">JOT</h1>
       </a>
     </nav>
   </header>
-  <main>
+  <main class="coolbackground">
     <div class="container-fluid">
       <div class="row ">
         <div class="d-md-flex justify-content-evenly py-md-5 py-4">
           <!-- NOTE List of notes and create new note -->
-          <div class="col-md-4 my-3">
-            <div id="" class="card ">
-              <h1 class="pt-4 text-center">Jots:
+          <div class="col-md-3 my-3">
+            <div id="" class="card bigcard glasscard">
+              <h1 class="pt-4 ps-3">Jots:
                 <span id="notes-count"></span>
               </h1>
               <div class="p-3" id="allNotes">
-                <h3> JavaScript</h3>
+                <!-- <h3> JavaScript</h3>
                 <h3> CSS</h3>
-                <h3> MVC</h3>
+                <h3> MVC</h3> -->
               </div>
               <form onsubmit="app.notesController.createNote()">
                 <div class="">
@@ -71,6 +75,11 @@
                     <label for="color" class="form-label">Select color:</label>
                     <input type="color" class="form-control" name="color" id="color-picker">
                   </div>
+                  <div class="ps-4 pb-4">
+                    <button type="submit" class="btn btn-sm btn-success">Add Note</button>
+
+                  </div>
+
 
 
                 </div>
@@ -80,21 +89,24 @@
 
 
           <!-- NOTE This is my active note card info -->
-          <div class="col-md-6 my-3 card" id="bigNote">
+          <div class="col-md-6 my-3 card glasscard" id="bigNote">
 
             <div class="row">
               <div class="p-2">
-                <div class="d-flex justify-content-between py-3 px-4">
+                <div class="d-flex justify-content-center py-3 px-4">
 
                   <h1 class="text-center">About Jot </h1>
-                  <button class="btn btn-danger">
+                  <!-- <button class="btn btn-danger">
                     <i class="mdi mdi-trash-can"></i>
-                  </button>
+                  </button> -->
 
                 </div>
 
                 <div class="row justify-content-evenly ">
-                  <div class="col-4">
+                  <h2 class="p-5"> Welcome to Jot! A place to keep your wandering thoughts. Start by creating a new note
+                    to jot down
+                    those ideas!</h2>
+                  <!-- <div class="col-4">
                     <h6> Created at: </h6>
                     <h6> Updated at: </h6>
                     <h6> Words: </h6>
@@ -104,7 +116,7 @@
                       <textarea
                         class="bodytext">Welcome to Jot! A place to keep your wandering thoughts. Start by creating a new note to jot down those ideas!</textarea>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
