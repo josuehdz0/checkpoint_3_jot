@@ -46,6 +46,7 @@ get BigNoteTemplate(){
           <div class="">
             <textarea class="bodytext" name="body" id="📝" onblur="app.notesController.updateNote()"> ${this.body}
             </textarea>
+            <h6 class="p-2"> Click anywhere outside the textbox to save your Jot</h6>
           </div>
         </div>
       </div>
