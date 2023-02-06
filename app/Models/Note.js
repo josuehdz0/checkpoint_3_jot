@@ -1,3 +1,4 @@
+import { appState } from "../AppState.js";
 import { generateId } from "../Utils/generateId.js";
 
 
@@ -17,6 +18,14 @@ export class Note{
     <h3 onclick= "app.notesController.setActiveNote('${this.id}')"> ${this.name} </h3>
     `
   }
+
+  get noteCountTemplate(){
+    return`
+    ${appState.notes.length}
+    `
+  }
+
+  
 
 get BigNoteTemplate(){
   return`

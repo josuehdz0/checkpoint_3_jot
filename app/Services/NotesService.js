@@ -10,7 +10,11 @@ class NotesService{
     saveState('notes',appState.notes)
     console.log(appState.notes);
     appState.emit('activeNote')
+    
   }
+
+
+ 
 
 
 
@@ -18,6 +22,7 @@ class NotesService{
     let newNote = new Note(formData)
     console.log(newNote);
     appState.notes.push(newNote)
+    // appState.noteCount++;
     saveState('notes',appState.notes)
     appState.emit('notes')
   }
@@ -39,9 +44,14 @@ class NotesService{
     }
 
     appState.notes.splice(noteIndex,1)
+    // appState.noteCount--;
     saveState('notes',appState.notes)
     appState.emit('notes')// this reminds the emitter to look at this change
   }
+
+  // getNumberOfNotes(){
+  //   return appState.notes.length
+  // }
 
 }
 

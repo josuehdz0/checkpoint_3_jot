@@ -9,13 +9,16 @@ function _drawNotes(){
   let template = ''
   notes.forEach(n => template += n.allNotesTemplate)
   setHTML('allNotes',template)
+  _drawCount()
 }
 
 function _drawNote() {
   let note = appState.activeNote
   setHTML('bigNote',note.BigNoteTemplate)
+}
 
-  
+function _drawCount() {
+  document.getElementById("notes-count").innerHTML = `${appState.notes.length}`;
 }
 
 
@@ -24,6 +27,8 @@ export class NotesController{
     _drawNotes()
     appState.on('notes',_drawNotes)
     appState.on('activeNote', _drawNote)
+    // appState.on('notesCount',_drawCount)
+    // appState.on('noteCount',)
   }
 
   createNote(){
@@ -33,6 +38,7 @@ export class NotesController{
       const formData = getFormData(form)
       console.log(formData);
       notesService.createNote(formData)
+      _drawCount()
       form.reset()
     } catch (error) {
       Pop.error(error.message)
@@ -56,6 +62,7 @@ export class NotesController{
       let updatedBody = textArea.value
       console.log('blurred',updatedBody);
       notesService.updateNote(updatedBody)
+      
     } catch (error) {
       console.error(error)
       Pop.error(error.message)
@@ -69,11 +76,15 @@ export class NotesController{
         return
       }
       notesService.deleteNote(noteId)
-      
+      window.location.reload()
+      _drawCount()
+
     } catch (error) {
       Pop.error(error)
     }
   }
+
+  
 
 
   }
